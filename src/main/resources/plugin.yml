@@ -1,0 +1,17 @@
+name: CustomItem
+version: 1.0
+main: io.efetemel.CustomItem
+author: efetemel
+api-version: 1.20
+
+commands:
+  customreload:
+    description: Custom Items Reload
+    aliases:
+      - customreload
+      - creload
+  ir:
+    description: Item Yönetimi
+    aliases:
+      - ir
+      - esyatarifleri

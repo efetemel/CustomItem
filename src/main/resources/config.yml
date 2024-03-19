@@ -1,0 +1,405 @@
+# Config Ayarları
+# Eklediğiniz itemin craftında eğer bir custom item varsa "custom_craft_item" değerini "true" olarak işaretleyin
+# Craft Items kısmında ".marul" şeklinde istediğiniz item in "short_name" ini başında "." olarak ekleyin
+# Yeni bir item eklediğinizde /creload ile yeni itemi oyuna ekleyin
+# Effect kısmına istediğiniz efekti yazıp value değerine saniye yazın
+# Sigara çeşidi eklemek için "short_name" kısmına "cigaratte_malbora" gibi başına "cigaratte" ekleyin
+# Sigara çeişidinde Hak sistemi için "Kalan Hak: 3" gibi bir değer verin
+# Ölümsüzlük totemi eklemek istiyorsanız "short_name" kısmı "undying" içermesi gerekiyor ve "item_id" "ENCHANTED_BOOK" olmasını öneririm
+# Custom Texture eklemek için "custom_model_data" kısmına istediğinz bir sayı girin ve texture pack dosyasında o sayıya karşılık gelen texture ekleyin
+
+new_items:
+  malbora:
+    display_name: "Malbora Touch Blue Paketi"
+    short_name: "cigaratte_malbora"
+    lore:
+      - "Güzel bir sigara"
+      - "Kalan Hak: 3"
+    item_id: "CARROT_ON_A_STICK"
+    craft_type:
+      top_left: "N"
+      top_center: "A"
+      top_right: "N"
+      center_left: "N"
+      center_center: "B"
+      center_right: "N"
+      bottom_left: "N"
+      bottom_center: "C"
+      bottom_right: "N"
+    craft_items:
+      A: "GUNPOWDER"
+      B: "SUGAR_CANE"
+      C: "BROWN_MUSHROOM"
+    custom_craft_item: false
+    effects:
+      NIGHT_VISION: 30
+      CONFUSION: 5
+    custom_model_data: 24
+  marul:
+    display_name: "Marul"
+    short_name: "marul"
+    lore:
+      - "Taze bir marul"
+      - "Çiğköfte Malzemesi"
+    item_id: "BREAD"
+    craft_type:
+      top_left: "N"
+      top_center: "N"
+      top_right: "N"
+      center_left: "N"
+      center_center: "N"
+      center_right: "N"
+      bottom_left: "A"
+      bottom_center: "A"
+      bottom_right: "A"
+    craft_items:
+      A: "SWEET_BERRIES"
+    custom_craft_item: false
+    custom_model_data: 9
+  cigkofte:
+    display_name: "Doritoslu Ultra Mega Dürüm"
+    short_name: "cigkofte"
+    lore:
+      - "Komagene"
+    item_id: "BREAD"
+    craft_type:
+      top_left: "N"
+      top_center: "A"
+      top_right: "N"
+      center_left: "B"
+      center_center: "B"
+      center_right: "B"
+      bottom_left: "C"
+      bottom_center: "C"
+      bottom_right: "C"
+    craft_items:
+      A: ".marul"
+      B: "MUTTON"
+      C: "BREAD"
+    effects_random: true
+    effects:
+        REGENERATION: 10
+        POISON: 10
+    custom_craft_item: true
+    custom_model_data: 8
+  goldbread:
+    display_name: "Altın Ekmek"
+    short_name: "goldbread"
+    lore:
+      - "Altınla ekmeğin muhteşem birleşimi"
+    item_id: "BREAD"
+    craft_type:
+      top_left: "A"
+      top_center: "A"
+      top_right: "A"
+      center_left: "A"
+      center_center: "B"
+      center_right: "A"
+      bottom_left: "A"
+      bottom_center: "A"
+      bottom_right: "A"
+    craft_items:
+      A: "GOLD_INGOT"
+      B: "BREAD"
+    custom_craft_item: false
+    custom_model_data: 23
+  pita:
+    display_name: "Ramazan Pidesi"
+    short_name: "pita"
+    lore:
+      - "11 Ayın Sultanı Ramazan"
+      - "İftarda çok güzel gider"
+      - "Altınlı"
+    item_id: "BREAD"
+    craft_type:
+      top_left: "A"
+      top_center: "A"
+      top_right: "A"
+      center_left: "B"
+      center_center: "B"
+      center_right: "B"
+      bottom_left: "C"
+      bottom_center: "C"
+      bottom_right: "C"
+    craft_items:
+      A: "GOLD_INGOT"
+      B: "SUGAR"
+      C: ".goldbread"
+    effects:
+      SATURATION: 120
+    custom_craft_item: true
+    custom_model_data: 7
+  cola:
+    display_name: "Coca Cola"
+    short_name: "cola"
+    lore:
+      - "Soğuk içiniz"
+    item_id: "HONEY_BOTTLE"
+    craft_type:
+      top_left: "N"
+      top_center: "N"
+      top_right: "N"
+      center_left: "N"
+      center_center: "N"
+      center_right: "N"
+      bottom_left: "A"
+      bottom_center: "B"
+      bottom_right: "C"
+    craft_items:
+      A: "BLACK_DYE"
+      B: "SUGAR"
+      C: "GLASS_BOTTLE"
+    effects:
+      SPEED: 15
+    custom_craft_item: false
+    custom_model_data: 25 
+  chocolate:
+    display_name: "Çikolata"
+    short_name: "chocolate"
+    lore:
+      - "Hız verir"
+    item_id: "BREAD"
+    craft_type:
+      top_left: "N"
+      top_center: "N"
+      top_right: "N"
+      center_left: "N"
+      center_center: "N"
+      center_right: "N"
+      bottom_left: "N"
+      bottom_center: "A"
+      bottom_right: "B"
+    craft_items:
+      A: "SUGAR"
+      B: "MILK_BUCKET"
+    effects:
+      SPEED: 20
+    custom_craft_item: false
+    custom_model_data: 30       
+  super_netherite_pickaxe:
+    display_name: "Süper Netherite Kazma"
+    short_name: "super_netherite_pickaxe"
+    lore:
+      - "Dayanıklılık Hızlı Bitebilir"
+    item_id: "NETHERITE_PICKAXE"
+    craft_type:
+      top_left: "N"
+      top_center: "A"
+      top_right: "N"
+      center_left: "N"
+      center_center: "A"
+      center_right: "N"
+      bottom_left: "N"
+      bottom_center: "A"
+      bottom_right: "N"
+    craft_items:
+      A: "NETHERITE_PICKAXE"
+    custom_craft_item: false
+    custom_model_data: 10
+  super_netherite_axe:
+    display_name: "Süper Netherite Balta"
+    short_name: "super_netherite_axe"
+    lore:
+      - "Ağaçları yok eder"
+      - "Dayanıklılık Hızlı Bitebilir"
+    item_id: "NETHERITE_AXE"
+    craft_type:
+      top_left: "N"
+      top_center: "A"
+      top_right: "N"
+      center_left: "N"
+      center_center: "A"
+      center_right: "N"
+      bottom_left: "N"
+      bottom_center: "A"
+      bottom_right: "N"
+    craft_items:
+      A: "NETHERITE_AXE"
+    custom_craft_item: false
+    custom_model_data: 11
+  super_netherite_shovel:
+    display_name: "Süper Netherite Kürek"
+    short_name: "super_netherite_shovel"
+    lore:
+      - "Küreklerin Küreği"
+      - "Dayanıklılık Hızlı Bitebilir"
+    item_id: "NETHERITE_SHOVEL"
+    craft_type:
+      top_left: "N"
+      top_center: "A"
+      top_right: "N"
+      center_left: "N"
+      center_center: "A"
+      center_right: "N"
+      bottom_left: "N"
+      bottom_center: "A"
+      bottom_right: "N"
+    craft_items:
+      A: "NETHERITE_SHOVEL"
+    custom_craft_item: false
+    custom_model_data: 12
+  super_netherite_sword:
+    display_name: "Süper Netherite Kılıç"
+    short_name: "super_netherite_sword"
+    lore:
+      - "Fazla Güçlü"
+      - "Dayanıklılık Hızlı Bitebilir"
+    item_id: "NETHERITE_SWORD"
+    craft_type:
+      top_left: "N"
+      top_center: "A"
+      top_right: "N"
+      center_left: "N"
+      center_center: "A"
+      center_right: "N"
+      bottom_left: "N"
+      bottom_center: "A"
+      bottom_right: "N"
+    craft_items:
+      A: "NETHERITE_SWORD"
+    custom_craft_item: false
+    custom_model_data: 25  
+  medium_diamond_pickaxe:
+    display_name: "Medium Elmas Kazma"
+    short_name: "medium_diamond_pickaxe"
+    lore:
+      - "Dayanıklılık Hızlı Bitebilir"
+    item_id: "DIAMOND_PICKAXE"
+    craft_type:
+      top_left: "N"
+      top_center: "A"
+      top_right: "N"
+      center_left: "N"
+      center_center: "A"
+      center_right: "N"
+      bottom_left: "N"
+      bottom_center: "A"
+      bottom_right: "N"
+    craft_items:
+      A: "DIAMOND_PICKAXE"
+    custom_craft_item: false
+    custom_model_data: 10
+  medium_diamond_axe:
+    display_name: "Medium Elmas Balta"
+    short_name: "medium_diamond_axe"
+    lore:
+      - "Ağaçları yok eder"
+      - "Dayanıklılık Hızlı Bitebilir"
+    item_id: "DIAMOND_AXE"
+    craft_type:
+      top_left: "N"
+      top_center: "A"
+      top_right: "N"
+      center_left: "N"
+      center_center: "A"
+      center_right: "N"
+      bottom_left: "N"
+      bottom_center: "A"
+      bottom_right: "N"
+    craft_items:
+      A: "DIAMOND_AXE"
+    custom_craft_item: false
+    custom_model_data: 11
+  medium_diamond_shovel:
+    display_name: "Medium Elmas Kürek"
+    short_name: "medium_diamond_shovel"
+    lore:
+      - "Küreklerin Küreği"
+      - "Dayanıklılık Hızlı Bitebilir"
+    item_id: "DIAMOND_SHOVEL"
+    craft_type:
+      top_left: "N"
+      top_center: "A"
+      top_right: "N"
+      center_left: "N"
+      center_center: "A"
+      center_right: "N"
+      bottom_left: "N"
+      bottom_center: "A"
+      bottom_right: "N"
+    craft_items:
+      A: "DIAMOND_SHOVEL"
+    custom_craft_item: false
+    custom_model_data: 12
+  gold_of_undying:
+    display_name: "Altın Totemi"
+    short_name: "gold_of_undying"
+    lore:
+      - "Kalan Hak: 2"
+    item_id: "ENCHANTED_BOOK"
+    craft_type:
+      top_left: "A"
+      top_center: "A"
+      top_right: "A"
+      center_left: "A"
+      center_center: "B"
+      center_right: "A"
+      bottom_left: "A"
+      bottom_center: "A"
+      bottom_right: "A"
+    craft_items:
+      A: "GOLD_BLOCK"
+      B: "TOTEM_OF_UNDYING"
+    effects:
+      NIGHT_VISION: 50
+      ABSORPTION: 50
+      SATURATION: 50
+      FIRE_RESISTANCE: 1000
+      REGENERATION: 1000    
+    custom_craft_item: false
+    custom_model_data: 5  
+  copper_of_undying:
+    display_name: "Bakır Totemi"
+    short_name: "copper_of_undying"
+    lore:
+      - "Kalan Hak: 2"
+    item_id: "ENCHANTED_BOOK"
+    craft_type:
+      top_left: "A"
+      top_center: "A"
+      top_right: "A"
+      center_left: "A"
+      center_center: "B"
+      center_right: "A"
+      bottom_left: "A"
+      bottom_center: "A"
+      bottom_right: "A"
+    craft_items:
+      A: "COPPER_BLOCK"
+      B: ".gold_of_undying"
+    effects:
+      NIGHT_VISION: 500
+      ABSORPTION: 160
+      SATURATION: 160
+      FIRE_RESISTANCE: 1400
+      REGENERATION: 1400      
+    custom_craft_item: true
+    custom_model_data: 6 
+  diamond_of_undying:
+    display_name: "Elmas Totemi"
+    short_name: "diamond_of_undying"
+    lore:
+      - "Kalan Hak: 4"
+    item_id: "ENCHANTED_BOOK"
+    craft_type:
+      top_left: "A"
+      top_center: "A"
+      top_right: "A"
+      center_left: "A"
+      center_center: "B"
+      center_right: "A"
+      bottom_left: "A"
+      bottom_center: "A"
+      bottom_right: "A"
+    craft_items:
+      A: "DIAMOND_BLOCK"
+      B: ".copper_of_undying"
+    effects:
+      NIGHT_VISION: 1100
+      ABSORPTION: 280
+      SATURATION: 280
+      FIRE_RESISTANCE: 2000
+      REGENERATION: 2000      
+    custom_craft_item: true
+    custom_model_data: 7     
+  
